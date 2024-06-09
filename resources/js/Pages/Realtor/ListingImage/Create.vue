@@ -71,6 +71,7 @@ const imageErrors = computed(() => Object.values(form.errors))
 const canUpload = computed(() => form.images.length)
 const upload = () => {
   form.post(
+    // eslint-disable-next-line no-undef
     route('realtor.listing.image.store', { listing: props.listing.id }),
     {
       onSuccess: () => form.reset('images'),
